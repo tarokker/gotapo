@@ -1656,15 +1656,18 @@ func (o *Tapo) updateRaw() {
 		o.hostURLStok = o.hostURL + `/stok=` + o.stokID + `/ds`
 		o.userGroup = result.Result.UserGroup
 	} else {
-		p(`Authenticate failed. Try use another cred. login - "admin", password - your password in Tapo account.`)
-		if o.UserDef != o.User {
-			o.UserDef = o.User
-			o.User = "admin"
-			p(`App will be trying with "admin" with next operation(if your pass on rtsp equal pass your account). If next operation exist.`)
-		} else {
-			p(`Authenticate failed. Login by "admin" has failed.`)
-			panic("!end operation authenticate!")
-		}
+		p("authentication failed")
+		/*
+			p(`Authenticate failed. Try use another cred. login - "admin", password - your password in Tapo account.`)
+			if o.UserDef != o.User {
+				o.UserDef = o.User
+				o.User = "admin"
+				p(`App will be trying with "admin" with next operation(if your pass on rtsp equal pass your account). If next operation exist.`)
+			} else {
+				p(`Authenticate failed. Login by "admin" has failed.`)
+				panic("!end operation authenticate!")
+			}
+		*/
 	}
 }
 

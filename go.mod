@@ -1,3 +1,3 @@
-module github.com/KusoKaihatsuSha/gotapo
+module github.com/tarokker/gotapo
 
-go 1.20
+go 1.21
